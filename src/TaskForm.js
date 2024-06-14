@@ -4,7 +4,7 @@ export default function TaskForm() {
     const [taskName, setTaskName] = useState('');
     return (
         <form>
-            <button>Enter</button>
+            <button>+</button>
             <input type='text'
                    value={taskName}
                    onChange={ev => setTaskName(ev.target.value)}

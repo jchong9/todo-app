@@ -1,14 +1,17 @@
 import './App.css';
 import TaskForm from "./TaskForm";
+import Task from "./Task";
 
 function App() {
   return (
-    <div>
+    <main>
       <TaskForm />
-      <div>
-        <input type='checkbox' />
-      </div>
-    </div>
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+    </main>
   );
 }
 
