@@ -23,6 +23,12 @@ function App() {
     });
   }
 
+  function removeTask(indexToRemove) {
+    setTasks(prev => {
+      return prev.filter((taskObject, index) => index !== indexToRemove);
+    });
+  }
+
   function updateTaskDone(taskIndex, newDone) {
     setTasks(prev => {
       const newTasks = [...prev];
@@ -38,13 +44,13 @@ function App() {
     const percentage = numberComplete / numberTotal * 100;
     switch (percentage) {
       case 0:
-        return "Let's get it started!";
+        return "Let's get it started! 🔥";
       case 50:
-        return "Almost there!";
+        return "Almost there! 😊";
       case 100:
-        return "Great job!";
+        return "Great job! 🎉";
       default:
-        return "Keep it going!";
+        return "Keep it going! 🫡";
     }
   }
 
@@ -55,6 +61,7 @@ function App() {
       <TaskForm onAdd={addTask} />
       {tasks.map((task, index) => (
         <Task {...task}
+              onTrash={() => removeTask(index)}
               onToggle={done => updateTaskDone(index, done)} />
       ))}
     </main>
