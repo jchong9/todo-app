@@ -1,3 +1,12 @@
+# Simple To-Do App
+A simple to-do app where users can create, edit, and delete their to-do items.
+
+# Future
+- Include multiple list items for better organization
+
+# Acknowledgements
+This project was built from the following tutorial: [Build a Todo App with React.js](https://www.youtube.com/watch?v=QdTHUv79EZc)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
